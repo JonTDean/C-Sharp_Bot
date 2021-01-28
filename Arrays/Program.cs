@@ -2,10 +2,8 @@
 
 namespace Arrays
 {
-    class Program<T>
+    static class Program
     {
-        private T currentType { get; set; }
-
         static void Main(string[] args)
         {
             // TODO:
