@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Arrays.Tests.Generator.GeneratorTypes
 {
-    class Dictionaries
+    class ListGen
     {
     }
 }

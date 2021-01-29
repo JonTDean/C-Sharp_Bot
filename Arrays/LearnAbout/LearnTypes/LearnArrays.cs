@@ -65,22 +65,22 @@ namespace Arrays
 }
 
 
-/* Annotations
-* 
-  1.   If you're interested in this, Think of this as a Var (it's not one tho).
+/* Reading
+ 
+*   1. If you're interested in this, Think of this as a Var (it's not one tho).
     https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/
 
-*
-  2.   Took this from Stack Overflow:
+*   2. Took this from Stack Overflow:
     https://stackoverflow.com/questions/56352299/gettype-return-int-instead-of-system-int32
-*
-  3.    GetType() with arrays (Works with Generics). 
-    https://stackoverflow.com/questions/28624571/how-to-determine-the-type-of-an-generic-array-element-with-reflection
-*
-  4.    GetElementType of defined arrays.
-    https://docs.microsoft.com/en-us/dotnet/api/system.type.getelementtype?redirectedfrom=MSDN&view=net-5.0#System_Type_GetElementType
 
-* Reading
-* 1. GetType: https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype?view=net-5.0
-*
+*   3. GetType() with arrays (Works with Generics). 
+    https://stackoverflow.com/questions/28624571/how-to-determine-the-type-of-an-generic-array-element-with-reflection
+
+*   4. GetElementType of defined arrays.
+    https://docs.microsoft.com/en-us/dotnet/api/system.type.getelementtype?redirectedfrom=MSDN&view=net-5.0#System_Type_GetElementType
+    
+
+*   5. GetType: https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype?view=net-5.0
+
+*   6. I Suck at Generics: https://stackoverflow.com/questions/8171412/cannot-implicitly-convert-type-int-to-t/8171476
 */

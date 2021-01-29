@@ -7,52 +7,106 @@ namespace Arrays.Tests.Generator.GeneratorTypes
     // Use lists to create dynamically sized arrays.
     static class ArrayGen<G>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private static Random rand = new Random();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="DataType"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
         static public G[] Selector(G DataType, byte length)
         {
-            
             List<G> arrayToBe = new List<G>();
 
             return arrayToBe.ToArray();
         }
 
-        static public int[] intArrayGenerator(List<G> arrayToBe, byte length)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arrayToBe"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        static public int[] intArrayGenerator(List<int> arrayToBe, byte length)
         {
-            //List<int> arrayToBe = new List<int>();
-
             for (int i = 0; i < length; i++)
             {
-                arrayToBe.Add(rand.Next(1, length));
+                arrayToBe[i] = rand.Next(1, length);
             }
 
             return arrayToBe.ToArray();
         }
 
-        static public string[] stringArrayGenerator(List<G> arrayToBe, byte length)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arrayToBe"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        static public string[] stringArrayGenerator(List<string> arrayToBe, byte length)
         {
-            //List<string> arrayToBe = new List<string>();
+            List<string> stringsList = new List<string>(){
+                "alfa",
+                "bravo",
+                "charlie",
+                "delta",
+                "echo",
+                "foxtrot",
+                "golf",
+                "hotel",
+                "india",
+                "juliett",
+                "kilo",
+                "lima",
+                "mike",
+                "november",
+                "oscar",
+                "papa",
+                "quebec",
+                "romeo",
+                "sierra",
+                "tango",
+                "uniform",
+                "victor",
+                "whiskey",
+                "xray",
+                "yankee",
+                "zulu",
+            };
+
+            for (int i = 0; i < length; i++)
+            {
+                arrayToBe[i] = stringsList[rand.Next(0, length)]; 
+            }
+
             return arrayToBe.ToArray();
         }
 
-        static public bool[] boolArrayGenerator(List<G> arrayToBe, byte length)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arrayToBe"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        static public bool[] boolArrayGenerator(List<bool> arrayToBe, byte length)
         {
-
-            //List<bool> arrayToBe = new List<bool>();
-
-            for (int i = 0; i < length; i++)
+            for(int i = 0; i < length; i++)
             {
                 if (rand.Next(1, length) % 2 == 0)
                 {
-                    arrayToBe.Add(true);
+                    arrayToBe[i] = true;
                 }
                 else
                 {
-                    arrayToBe.Add(false);
+                    arrayToBe[i] = false;
                 }
             }
 
             return arrayToBe.ToArray();
         }
-    }lock;kl;k
+    }
 }

@@ -39,7 +39,7 @@ namespace Arrays.Tests
         /// This Generates the Arrays and supplies Data to the given *Gen Class Selector.
         /// </summary>
         /// <returns> Returns Generic Arrays<\T> Eventually will populate other collections.</returns>
-        public G Generate()
+        public G[] Generate()
         {
             Console.Clear();
             Console.WriteLine("Generation Process Starting...");

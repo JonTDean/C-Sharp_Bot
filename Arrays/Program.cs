@@ -3,17 +3,24 @@ using Arrays.Tests;
 
 namespace Arrays
 {
-    static class Program
+    static class Program<G>
     {
         static void Main(string[] args)
         {
             // TODO:
             // Test Variables DELETE AFTER**********
-            Generators<int> intArray = new Generators<int>(10, 5);
-            Generators<string> stringArray = new Generators<string>("ae")
+            Generators<int> intGenerator = new Generators<int>(1, 10);
+            Generators<string> stringGenerator = new Generators<string>("a", 10);
+            Generators<bool> boolGenerator = new Generators<bool>(true, 10);
+
+            int[] intArray = intGenerator.Generate();
+            string[] stringArray = stringGenerator.Generate();
+            bool[] boolArray = boolGenerator.Generate();
+
+
             //int[] intArray = { 1, 2, 3 };
-            string[] stringArray = { "ae", "be", "ce" };
-            bool[] boolArray = { true, false, true };
+            //string[] stringArray = { "ae", "be", "ce" };
+            //bool[] boolArray = { true, false, true };
             //---------------------------------------
 
             LearnArrays<int> learnArrayInt = new LearnArrays<int>(intArray);
