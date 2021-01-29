@@ -4,12 +4,11 @@ using System.Text;
 
 namespace Arrays.Interfaces.CLI
 {
-    class CLI
+    public static class TeachCli
     {
 
         static void EntryPoint()
-        {
-
+        
             //  Generators<int> intArrayGenerator = new Generators<int>(1, 10);
 
             //  Generators<string> stringArrayGenerator = new Generators<string>("a", 10);

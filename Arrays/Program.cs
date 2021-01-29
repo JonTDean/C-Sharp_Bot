@@ -1,5 +1,6 @@
-﻿using System;
-using Arrays.Tests;
+﻿using Arrays.Interfaces.CLI;
+using System;
+
 
 /*  TODO:
  *      Finish up the Generators and focus on API syntax.
@@ -61,7 +62,7 @@ namespace Arrays
             if (input == configList[0] || input == configList[3])
             {
                 // Call on CLI Entry Point Here.
-                CLI.EntryPoint();
+                TeachCli.EntryPoint();
             } else if (input == configList[1] || input == configList[4])
             {
                 // Call on Discord Entry Point Here.
