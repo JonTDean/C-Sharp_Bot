@@ -53,11 +53,12 @@ namespace Arrays
 
         // Type Check the Array.
         public string getType()
-        { 
+        {
             // Debug -->
             //Console.WriteLine("Array Type is: {0}", CheckParser.TypeCheck(this.GenericArray[0].GetType()));
 
-            return CheckParser.TypeCheck(this.GenericArray[0].GetType());
+            return $"{this.GenericArray[0]}";
+            //return CheckParser.TypeCheck(this.GenericArray[0].GetType());
         }
 
        

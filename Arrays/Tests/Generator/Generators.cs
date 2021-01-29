@@ -9,6 +9,7 @@ namespace Arrays.Tests
     /// The Generator Class is used for dynamically creating Collections filled with Dynamic Types.
     /// </summary>
     /// <typeparam name="G"> Generic Type for class, carries on to the *Gen Sub-Classes.</typeparam>
+    
     class Generators<G>
     {
         /// <param name="DataType">Generic Field for the DataType of the Collection.</param>
@@ -33,7 +34,7 @@ namespace Arrays.Tests
             this.DataType = DataType;
             this.Length = Length;
             this.CollectionType = CollectionType;
-        }  
+        }
 
         /// <summary>
         /// This Generates the Arrays and supplies Data to the given *Gen Class Selector.
@@ -41,22 +42,40 @@ namespace Arrays.Tests
         /// <returns> Returns Generic Arrays<\T> Eventually will populate other collections.</returns>
         public G[] Generate()
         {
+            string choice;
             Console.Clear();
             Console.WriteLine("Generation Process Starting...");
             Console.WriteLine("Thank You for Choosing Arrays.");
+            Console.WriteLine("Please Type one of the following Data Types.");
+            Console.WriteLine("1.) Int");
+            Console.WriteLine("2.) String");
+            Console.WriteLine("3.) Bool");
 
-            return ArrayGen<G>.Selector(DataType, Length);
+            choice = Console.ReadLine().ToLower();
+            while (choice != "int" || choice != "string" || choice != "bool")
+            {
+                choice = Console.ReadLine().ToLower();
+            }
 
+            switch(choice){
+                case "int":
+                    return ArrayGen<int>.Selector(Length) as G[];
+                case "string":
+                    return ArrayGen<string>.Selector(Length) as G[];
+                case "bool":
+                    return ArrayGen<bool>.Selector(Length) as G[];
+            }
 
+            throw new InvalidOperationException("You must give a proper choice for the Collection Data Type.");
             //Console.WriteLine("Would collection would you like to Generate?");
             //switch ()
             //    typeof(IEnumerable<DataType>).IsAssignableFrom(propertyInfo.PropertyType)
 
         }
 
-        static void collectionSelector()
-        {
+        //static void collectionSelector()
+        //{
 
-        }
+        //}
     }
 }
