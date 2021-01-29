@@ -5,18 +5,21 @@ using System.Text;
 namespace Arrays.Tests.Generator.GeneratorTypes
 {
     // Use lists to create dynamically sized arrays.
-    class Arrays<G>
+    static class ArrayGen<G>
     {
         private static Random rand = new Random();
 
-        public Arrays(G dataType, byte length)
+        static public G Selector(Type dataType, byte length)
         {
+            
             List<G> arrayToBe = new List<G>();
+
+            return arrayToBe[0];
         }
 
         static public int[] intArrayGenerator(List<G> arrayToBe, byte length)
         {
-            List<int> arrayToBe = new List<int>();
+            //List<int> arrayToBe = new List<int>();
 
             for (int i = 0; i < length; i++)
             {
@@ -26,16 +29,16 @@ namespace Arrays.Tests.Generator.GeneratorTypes
             return arrayToBe.ToArray();
         }
 
-        static public string[] stringArrayGenerator(byte length)
+        static public string[] stringArrayGenerator(List<G> arrayToBe, byte length)
         {
-            List<string> arrayToBe = new List<string>();
+            //List<string> arrayToBe = new List<string>();
             return arrayToBe.ToArray();
         }
 
-        static public bool[] boolArrayGenerator(byte length)
+        static public bool[] boolArrayGenerator(List<G> arrayToBe, byte length)
         {
 
-            List<bool> arrayToBe = new List<bool>();
+            //List<bool> arrayToBe = new List<bool>();
 
             for (int i = 0; i < length; i++)
             {
