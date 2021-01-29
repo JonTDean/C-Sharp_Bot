@@ -6,13 +6,17 @@ namespace Arrays.Tests.Generator.GeneratorTypes
 {
     // Use lists to create dynamically sized arrays.
     static class ArrayGen<G>
-    {   
+    {
         // Random Number Generator
         // Notes about this is the issuance of
         // the random number generator with
         // types that are of variance; int, bool
         // and string in this instance.
-        private static Random rand = new Random();
+        // //
+        // I need to move this to a new class
+        // Along with stringsList in the 
+        // stringArrayGen method.
+        private readonly static Random rand = new Random();
 
         /// <summary>
         /// 

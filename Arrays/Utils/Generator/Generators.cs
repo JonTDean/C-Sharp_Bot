@@ -42,7 +42,17 @@ namespace Arrays.Tests
         /// <returns> Returns Generic Arrays<\T> Eventually will populate other collections.</returns>
         public G[] Generate()
         {
-            string choice;
+            string userInput;
+            string[] choiceList = new string[6]
+            {
+                "int",
+                "string",
+                "bool",
+                "1",
+                "2",
+                "3",
+            };
+
             Console.Clear();
             Console.WriteLine("Generation Process Starting...");
             Console.WriteLine("Thank You for Choosing Arrays.");
@@ -51,18 +61,35 @@ namespace Arrays.Tests
             Console.WriteLine("2.) String");
             Console.WriteLine("3.) Bool");
 
-            choice = Console.ReadLine().ToLower();
-            while (choice != "int" || choice != "string" || choice != "bool")
+            // Takes in a userInput and does a comparison
+            // Check using the .Exists() Enumerator.
+            // THIS OPERATION IS O(log N^2) FIX THIS SHITTT
+            userInput = Console.ReadLine().ToLower();
+            while (!Array.Exists(choiceList, choice => choice == userInput))
             {
-                choice = Console.ReadLine().ToLower();
+                Console.WriteLine("ERROR 102: Please give a proper String choice.");
+                userInput = Console.ReadLine().ToLower();
             }
 
-            switch(choice){
+            switch(userInput)
+            {
                 case "int":
+                    Console.WriteLine("GENERATOR CHOICE: INT");
+                    return ArrayGen<int>.Selector(Length) as G[];
+                case "1":
+                    Console.WriteLine("GENERATOR CHOICE: INT");
                     return ArrayGen<int>.Selector(Length) as G[];
                 case "string":
+                    Console.WriteLine("GENERATOR CHOICE: STRING");
+                    return ArrayGen<string>.Selector(Length) as G[];
+                case "2":
+                    Console.WriteLine("GENERATOR CHOICE: STRING");
                     return ArrayGen<string>.Selector(Length) as G[];
                 case "bool":
+                    Console.WriteLine("GENERATOR CHOICE: BOOLEAN");
+                    return ArrayGen<bool>.Selector(Length) as G[];
+                case "3":
+                    Console.WriteLine("GENERATOR CHOICE: BOOLEAN");
                     return ArrayGen<bool>.Selector(Length) as G[];
             }
 

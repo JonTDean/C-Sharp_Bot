@@ -5,7 +5,6 @@ using Arrays.LearnAbout;
 
 namespace Arrays
 {
-
     /* TODO:
      
      *  Goals:
@@ -13,7 +12,7 @@ namespace Arrays
                 This array should handle all cases of
                 any Type and of any Array.
      
-        [  ] 2. After getting the Integer Type, it should
+        [  ] 2. After getting the Data Type / Collection Type, it should
                 Target the Learn Class.
 
         [  ] 3. Display a list of actions with Examples
@@ -84,4 +83,7 @@ namespace Arrays
 *   5. GetType: https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype?view=net-5.0
 
 *   6. I Suck at Generics: https://stackoverflow.com/questions/8171412/cannot-implicitly-convert-type-int-to-t/8171476
+
+*   7. Taking in arguments from Terminal: https://stackoverflow.com/questions/56108617/how-to-pass-arguments-in-command-line-using-dotnet
+
 */
