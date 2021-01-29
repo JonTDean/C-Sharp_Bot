@@ -9,12 +9,12 @@ namespace Arrays.Tests.Generator.GeneratorTypes
     {
         private static Random rand = new Random();
 
-        static public G Selector(Type dataType, byte length)
+        static public G[] Selector(G DataType, byte length)
         {
             
             List<G> arrayToBe = new List<G>();
 
-            return arrayToBe[0];
+            return arrayToBe.ToArray();
         }
 
         static public int[] intArrayGenerator(List<G> arrayToBe, byte length)

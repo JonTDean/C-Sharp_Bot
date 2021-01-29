@@ -1,4 +1,5 @@
 ﻿using System;
+using Arrays.Tests;
 
 namespace Arrays
 {
@@ -8,8 +9,9 @@ namespace Arrays
         {
             // TODO:
             // Test Variables DELETE AFTER**********
-
-            int[] intArray = { 1, 2, 3 };
+            Generators<int> intArray = new Generators<int>(10, 5);
+            Generators<string> stringArray = new Generators<string>("ae")
+            //int[] intArray = { 1, 2, 3 };
             string[] stringArray = { "ae", "be", "ce" };
             bool[] boolArray = { true, false, true };
             //---------------------------------------
